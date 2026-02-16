@@ -37,7 +37,7 @@ main{
     align-items: start;
     background: 
       linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), 
-      url("/public/Fondo.png") center/cover no-repeat;
+      url("/public/imagenes/Fondo.png") center/cover no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
