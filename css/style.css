@@ -321,7 +321,20 @@ h2{
     padding: 30px !important; 
     flex-flow: wrap row;
     border: 5px white solid;
+    /* transition: transform 20s ease-in-out !important;  */
+
 }
+
+
+
+/* @keyframes float {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-50px);
+    }
+} */
 
 .content__project-personal h3{
     font-size: 30px;
@@ -370,8 +383,9 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 300ms ease !important;
+    transition: all 2s ease !important;
 }
+
 
 .img-personal__2{
     background: url('/public/proyect-personal/rgb.png');
@@ -379,7 +393,7 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 300ms ease !important;
+    transition: all 2s ease !important;
 
 }
 
@@ -387,16 +401,13 @@ h2{
     text-decoration: none !important;
 }
 
-/* .img-personal__3{
-
-} */
-
 .img-personal__1:hover, .img-personal__2:hover{
     background: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     filter: brightness(100%);
+    transform: translateY(-20px);
 
 }
 
