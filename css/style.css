@@ -4,7 +4,6 @@ body{
     padding: 0px;
 }
 
-
 body::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -32,17 +31,13 @@ body::-webkit-scrollbar-thumb {
 #typing::after {
   content: "|";
   animation: blink 1s infinite;
-  
-
 }
 
 span#typing{
          font-family: "Syne", sans-serif !important;
-     font-weight: 400  !important;
+     font-weight: 600  !important;
      font-size: 30px  !important;
 }
-
-
 
 @keyframes blink {
   0% { opacity: 1; }
@@ -50,29 +45,43 @@ span#typing{
   100% { opacity: 1; }
 }
 
-main{
+ main{
     display: flex;
     justify-content: center;
     align-items: start;
-    background: 
-      linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), 
-      url("/public/imagenes/Fondo.png") center/cover no-repeat;
-    min-height: 130vh;
+    background: url("/public/imagenes/409843416_aaffeb87-4ffe-462f-81ff-2dd72b61a5d1.jpg") center/cover no-repeat;
+    min-height: 120vh;
     gap: 30px;
-    padding-top: 30px;
-    /* position: relative;  */
+    padding: 0px;
+    background-attachment: fixed;
+    position: relative;
 }
 
+main::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:250px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1)
+    );
+
+    pointer-events:none;
+}
 
 section.section {
     width: 100%;
     height: 100vh;
-    background: #000000;
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0)90%, rgba(0, 0, 0, 0)95%, rgba(0, 0, 0, 1) 100%);
-} 
-
-
-
+    background: linear-gradient(180deg,
+    rgba(0, 0, 0, 0)90%,
+    rgba(0, 0, 0, 0)95%,
+    rgba(0, 0, 0, 1) 100%);
+}
 
 /* Menú */
 header.menu{
@@ -85,14 +94,12 @@ header.menu{
 .menu i{
     font-size: 25px;
     transition: all 300ms ease;
-
 }
 
 body{
     position: relative;
     z-index: 0;
 }
-
 
 /* Scroll - iconos blancos cuando cambia el fondo */
 /* cuando el menú cambia a blanco */
@@ -102,7 +109,6 @@ body{
 }
 .menu.white-icons a:hover{
     color: white;
-    /* cursor: pointer; */
 }
 
 /* Links del menú */
@@ -111,12 +117,16 @@ body{
     color: black;
     font-family: "Syne", sans-serif;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
-
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    margin-right: 10px;
+}
+
+li.cv a{
+    margin-right: 0px !important;
 }
 
 /* Contenedor del menú */
@@ -124,18 +134,56 @@ body{
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: end;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 30px;
-
     padding: 18px 8px;
     gap: 20px;
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
     background-color: rgba(255, 255, 255, 0.02);
+}
+
+.menu ul li a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu ul li a i{
+    transition: 0.3s;
+}
+
+/* TEXTO OCULTO */
+.hover-menu{
+    position: absolute;
+    right: 70px; /* distancia respecto al icono */
+    opacity: 0;
+    transform: translateX(20px);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.menu ul li a:hover .hover-menu{
+    opacity: 1;
+}
+
+.menu ul li{
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HOVER */
+.menu ul li:hover .hover-menu{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 li.cv{
@@ -154,25 +202,24 @@ li.cv{
 
 .introduction{
     max-width: 1300px;
-    /* position: fixed !important; */
 }
 
 .introducion-presentation h1{
      font-family: "Syne", sans-serif;
      font-weight: 750;
      font-size: 90px;
-     width: 70%;
+     width: 90%;
 }
 
 .introducion-presentation span{
      font-family: "Syne", sans-serif;
-     font-weight: 300;
+     font-weight: 700;
      font-size: 70px;
 }
 
 .introducion-presentation p{
      font-family: "Syne", sans-serif;
-     font-weight: 400;
+     font-weight: 600;
      font-size: 30px;
      max-width: 85%;
      line-height: 40px;
@@ -181,23 +228,30 @@ li.cv{
 .introduction,
 .section,  .experience, .working-stack {
   position: relative;
-  /* z-index: 2; */
 }
-
 
 
 /*Section - Project professional*/
-
-
-.section{
+/* .section{
     display: flex;
     justify-content: center;
-}
+    margin-top: -100px;
+
+    background:
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%),
+    black;
+} */
+
+/* .section{
+    display:flex;
+    justify-content:center;
+    margin-top:-100px;
+    background:black;
+} */
 
 .section-proyect-professional{
     width: 1300px !important;
 }
-
 
 h2{
     font-size: 100px;
@@ -221,7 +275,7 @@ h2{
 .marquee {
   width: 100%;
   overflow: hidden;
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 .track {
@@ -367,17 +421,6 @@ h2{
 
 }
 
-
-
-/* @keyframes float {
-    from{
-        transform: translateY(0px);
-    }
-    to{
-        transform: translateY(-50px);
-    }
-} */
-
 .content__project-personal h3{
     font-size: 30px;
     font-family: "Syne", sans-serif;
@@ -464,7 +507,7 @@ h2{
 .experience{
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 150px;
 }
 
 .experience h2{
@@ -548,7 +591,7 @@ h2{
     width: 1300px;
     flex-flow: wrap row;
     gap: 50px;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 }
 
 .working-stack__content h2{
@@ -556,7 +599,7 @@ h2{
     justify-content: center;
     text-align: center;
     margin-bottom: 150px;
-    margin-top: 300px !important;
+    margin-top: 150px !important;
 }
 
 .working-stack__content div {
@@ -598,68 +641,121 @@ h2{
 }
 
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 500px !important;
-    z-index: 2;
     position: relative;
-}
-
-.footer-content h2{
-    margin: 0px;
-    text-transform: capitalize;
-    padding: 0px;
-}
-
-footer {
-    position: relative; /* MUY IMPORTANTE */
     display: flex;
     justify-content: center;
-    align-items: end;
-    background: 
-      linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), 
-      url("/public/imagenes/Fondo.png") center/cover no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-flow: wrap row;
-
-    
-    /* z-index: 2; */
+    align-items: flex-end;
+    min-height: 100vh;
+    padding: 80px 10%;
+    overflow: hidden;
+    background:
+    linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%),
+    url("/public/imagenes/409843416_aaffeb87-4ffe-462f-81ff-2dd72b61a5d1.jpg") center/cover no-repeat !important;
 }
 
-footer::after{
-    filter: blur(70px);
+/* contenido */
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
 }
 
-#footer-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, black, transparent);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.1s linear;
+/* redes */
+.social-media{
+    display: flex;
+    gap: 30px;
 }
 
-.footer-content h2{
+.social-media a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Syne";
+    font-size: 22px;
+    font-weight: 600;
     color: black;
-    font-size: 100px; 
+    text-decoration: none;
+    transition: all .3s ease;
 }
 
-footer .social-media{
-    flex: 1 0 100%;
-    font-family: 'syne';
+.social-media a i{
+    font-size: 26px;
 }
+
+/* hover elegante */
+.social-media a:hover{
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* descripción */
+.footer-content p{
+    font-family: "Syne";
+    font-size: 28px;
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+.footer-content .fa-circle{
+    font-size: 8px !important;
+    margin-top: 14px !important;
+}
+
+/* botón */
+.view-project{
+    width: fit-content;
+    padding: 14px 26px;
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.489);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(8px);
+    font-size: 18px !important;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease;
+    font-family: "Syne";
+}
+
+.view-project:hover{
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* título grande */
+.footer-content h2{
+    font-size: clamp(70px, 10vw, 100px);
+    font-weight: 800;
+    line-height: 0.9;
+    margin-top: 40px;
+    padding: 0px;
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.social-media{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-media a{
+    transition: all 1s ease;
+}
+
+.social-media a:hover{
+    color:white;
+}
+
 
 footer.section a{
     font-size: 40px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 600;
+
 }
 
 
@@ -764,4 +860,3 @@ footer{
     opacity: 1;
     transform: translateX(0px) !important;
 }
-
