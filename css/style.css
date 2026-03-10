@@ -533,7 +533,7 @@ h2{
     flex: 1 0 100%;
 }
 
-.content__experience h4{
+.content__experience h3{
     font-size: 40px;
     color: #91E0F6;
     font-family: "syne", sans-serif;
@@ -542,7 +542,7 @@ h2{
     text-align: end;
 }
 
-.experience__one h4{
+.experience__one h3{
     text-align: start;
 }
 
@@ -614,9 +614,9 @@ h2{
     padding: 20px;
 }
 
-.working-stack__content .frontend h4,
-.working-stack__content .design h4,
-.working-stack__content .data-architecture h4{
+.working-stack__content .frontend h3,
+.working-stack__content .design h3,
+.working-stack__content .data-architecture h3{
     font-size: 35px;
     font-family: 'Syne', sans-serif;
     font-weight: 600;
