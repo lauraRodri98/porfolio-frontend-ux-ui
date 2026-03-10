@@ -49,7 +49,7 @@ span#typing{
     display: flex;
     justify-content: center;
     align-items: start;
-    background: url("/public/imagenes/409843416_aaffeb87-4ffe-462f-81ff-2dd72b61a5d1.jpg") center/cover no-repeat;
+    background: url("/public/imagenes/banner.webp") center/cover no-repeat;
     min-height: 120vh;
     gap: 30px;
     padding: 0px;
@@ -650,7 +650,7 @@ footer{
     overflow: hidden;
     background:
     linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%),
-    url("/public/imagenes/409843416_aaffeb87-4ffe-462f-81ff-2dd72b61a5d1.jpg") center/cover no-repeat !important;
+    url("/public/imagenes/banner.webp") center/cover no-repeat !important;
 }
 
 /* contenido */
