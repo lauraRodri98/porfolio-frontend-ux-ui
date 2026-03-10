@@ -15,30 +15,36 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/notdog-solid.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/fontawesome.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/jelly-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/jelly-fill-regular.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/sharp-duotone-solid.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/sharp-solid.css">
 
     <title>Laura Rodríguez</title>
 </head>
 <body>
+    <!-- <canvas id="noise"></canvas> -->
+
     <header></header>
-    <main class="noise">
+    <main>
         <div class="introduction">
 
             <header class="menu">
                 <ul>
                     <li>
-                        <a href="#proyectos">
+                        <a class="proyect" href="#proyectos">
                             <i class="fa-sharp fa-solid fa-diagram-project"></i>
-                            Proyect</a>
+                            
+                        </a>
                     </li>
                     <li>
-                        <a href="#experience"><i class="fa-sharp fa-solid fa-briefcase"></i>
-                        Experience</a>
+                        <a href="#experience">
+                            <i class="fa-sharp fa-solid fa-briefcase"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="#warking-stack"><i class="fa-etch fa-solid fa-code" style="color: black;"></i>
-                        Warking Stack</a>
+                        <a href="#warking-stack">
+                            <i class="fa-etch fa-solid fa-code"></i>
+                        </a>
                     </li>
                     <li class="cv">
                         <a href="/public/CV/+LauraRodriguez-Frontend-DesarrolloAplicacionesWeb-667365751.pdf" target="_blank">CV</a>
@@ -50,23 +56,26 @@
             <div class="introducion-presentation">
                 <h1>FRONTEND DEVELOPER & UX/UI DESIGNER</h1>
                 <span>Laura Rodríguez</span>
-                <p>I design and build clear, functional, and accessible web interfaces. I focus on translating user needs into clean UI, consistent design systems, and efficient frontend implementations. Experience working with modern |</p>
+                <p>
+                    Frontend developer with a background in UX/UI design and full-stack development. Focused on building clean, functional, and
+                    <span id="typing"></span>
+                </p>
             </div>
 
         </div>
-        
-        
+
         
     </main>
     <div class="section" id="proyectos">
         <div class="marquee">
             <div class="track">
-                <h2>· Professional Project · Professional Project </h2>
-                <h2>· Professional Project · Professional Project </h2>
+                <h2>· Professional Project <i class="fa-jelly-fill fa-regular fa-circle"></i> Professional Project </h2>
+                <h2>· Professional Project <i class="fa-jelly-fill fa-regular fa-circle"></i> Professional Project </h2>
             </div>
         </div>
-
     </div>
+
+
 
     <section class="project-profesional">
         <div class="section__project-profesional">
@@ -116,7 +125,7 @@
             </div>
         </div>
     </div>
-    
+
     
     <section class="project-personal">
         <div class="section__project-personal">
@@ -146,7 +155,7 @@
     <!-- Experience -->
     <section class="experience" id="experience">
         <div class="experience__content">
-            <h2>Experience</h2>
+            <h2 class="title-experience">Experience</h2>
             <div class="content__experience experience__one">
                 <h4>Frontend Developer / Web Designer</h4>
                 <span>Angular Software · Mar 2024 – Present</span>
@@ -171,27 +180,59 @@
         </div>    
     </section>
 
+    <div class="bg-circles">
+
+        <div class="circle" style="width:900px;height:900px;top:1500px;left:0%"></div>
+
+        <div class="circle" style="width:800px;height:800px;top:2500px;right:0%"></div>
+        
+        <div class="circle" style="width:1000px;height:1000px;top:3800px;left:0%"></div>
+
+        <div class="circle" style="width:700px;height:700px;top:5500px;right:0%"></div>
+
+    </div>
+
 
     <!-- Working Stack -->
     <section class="working-stack" id="warking-stack">
         <div class="working-stack__content">
-            <h2>Working Stack</h2>
+            <h2 class="title-working-stack">Working Stack</h2>
 
-            <div class="frontend">
+
+
+            <div class="frontend working-stack__section">
                 <h4>Frontend</h4>
-                <p>HTML5 · CSS3 / SASS · React · Responsive Design · JavaScript · Accesibilidad</p>
-
+                <!-- <p>HTML5 · CSS3 / SASS · React · Responsive Design · JavaScript · Accesibilidad</p> -->
+                <span>HTML5 / CSS3 </span> · 
+                <span>SASS</span> · 
+                <span>React</span> · 
+                <span>JavaScript</span> · 
+                <span>Accesibility</span>
+                <span>Responsive Design</span> · 
             </div>    
 
-            <div class="design">
+             
+
+            <div class="design working-stack__section">
                 <h4>Design</h4>
-                <p>Figma · Design Systems · UX/UI · Prototyping · Web Layout · Maquetación Web · Arquitectura de información</p>
+                <!-- <p>Figma · Design Systems · UX/UI · Prototyping · Web Layout · Maquetación Web · Arquitectura de información</p> -->
+                <span>UX/UI</span> · 
+                <span>Figma</span> · 
+                <span>Design Systems</span> · 
+                <span>Prototyping</span> · 
+                <span>Web Layout</span> · 
+                <span>Information Architecture</span>
+
 
             </div>    
             
-            <div class="data-architecture">
+            <div class="data-architecture working-stack__section">
                 <h4>Data & architecture</h4>
-                <p>Rest APIs · MongoDB · NodeJS · Component-based architecture</p>
+                <!-- <p>Rest APIs · MongoDB · NodeJS · Component-based architecture</p> -->
+                <span>Rest APIs</span> · 
+                <span>MongoDB</span> · 
+                <span>NodeJS</span> · 
+                <span>Component-based architecture</span>
             </div>    
         </div>    
     </section>
@@ -201,9 +242,21 @@
         <div id="footer-overlay">
         </div>
 
-        <div class="footer-content social-media">
-                        <a href="https://github.com/lauraRodri98"><span>laurarodriguez</span></a>
-            <a href=""></a> 
+        <div class="footer-content social-media">           
+            <a href="https://github.com/lauraRodri98" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/laura-rodriguez/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="mailto:tuemail@email.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
             <h2>Design. Code. Connect.</h2>
         </div>
     </footer>
@@ -212,10 +265,12 @@
     <!-- Script .js -->
     <script src="https://kit.fontawesome.com/TU_KIT_ID.js" crossorigin="anonymous"></script>
      <!-- <script src="https://kit.fontawesome.com/tu_kit_id_aquí.js" crossorigin="anonymous"></script> -->
-    <canvas id="noise"></canvas>
-    <script src="js/noise.js"></script>
     <script src="js/script-scroll.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/scroll-body.js"></script>
+</div>
 
 
 </body>
+
 </html>

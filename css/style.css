@@ -29,7 +29,26 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Barra scroll */
+#typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+  
 
+}
+
+span#typing{
+         font-family: "Syne", sans-serif !important;
+     font-weight: 400  !important;
+     font-size: 30px  !important;
+}
+
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 main{
     display: flex;
@@ -38,13 +57,10 @@ main{
     background: 
       linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), 
       url("/public/imagenes/Fondo.png") center/cover no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 150vh;
+    min-height: 130vh;
     gap: 30px;
     padding-top: 30px;
-    position: relative; /* importante para pseudo-elemento */
+    /* position: relative;  */
 }
 
 
@@ -55,63 +71,74 @@ section.section {
     background: linear-gradient(180deg,rgba(0, 0, 0, 0)90%, rgba(0, 0, 0, 0)95%, rgba(0, 0, 0, 1) 100%);
 } 
 
-/* Pseudo-elemento de fade */
-.section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: black; /* color al que queremos llegar */
-    opacity: 0;        /* empieza invisible */
-    transition: opacity 2s ease; /* duración del desvanecimiento */
-    z-index: -1;       /* detrás de tu contenido */
-}
 
-#noise {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  opacity: 0.15;   /* <-- intensidad del ruido */
-  z-index: 1;
-}
+
 
 /* Menú */
 header.menu{
     position: fixed;
     top: 130px;
     right: 100px;
-    z-index: 99 !important;
+    z-index: 99999999999999;
 }
 
 .menu i{
     font-size: 25px;
+    transition: all 300ms ease;
+
 }
 
+body{
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Scroll - iconos blancos cuando cambia el fondo */
+/* cuando el menú cambia a blanco */
+.menu.white-icons i,
+.menu.white-icons a{
+    color: white;
+}
+.menu.white-icons a:hover{
+    color: white;
+    /* cursor: pointer; */
+}
+
+/* Links del menú */
 .menu ul li a{
     text-decoration: none;
     color: black;
     font-family: "Syne", sans-serif;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 300;
     text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Contenedor del menú */
 .menu ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: end;
-    
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+
+    padding: 18px 8px;
+    gap: 20px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
-.menu ul li{
-    margin-bottom: 25px;
-
-}
-
-.cv{
+li.cv{
     background: rgb(17, 17, 17);
     border-radius: 100%;
     width: 50px;
@@ -139,7 +166,7 @@ header.menu{
 
 .introducion-presentation span{
      font-family: "Syne", sans-serif;
-     font-weight: 700;
+     font-weight: 300;
      font-size: 70px;
 }
 
@@ -147,14 +174,17 @@ header.menu{
      font-family: "Syne", sans-serif;
      font-weight: 400;
      font-size: 30px;
-     width: 80%;
+     max-width: 85%;
+     line-height: 40px;
 }
 
 .introduction,
 .section,  .experience, .working-stack {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
+
+
 
 /*Section - Project professional*/
 
@@ -170,10 +200,16 @@ header.menu{
 
 
 h2{
-    font-size: 75px;
+    font-size: 100px;
     text-transform: uppercase;
     font-family: "Syne", sans-serif;
     color: rgb(255, 255, 255);
+}
+
+.fa-circle{
+    font-size: 20px;
+    transform: translateY(-100%);
+
 }
 
 .infinite{
@@ -185,6 +221,7 @@ h2{
 .marquee {
   width: 100%;
   overflow: hidden;
+  margin-top: 300px;
 }
 
 .track {
@@ -197,7 +234,7 @@ h2{
   white-space: nowrap;
   margin-right: 50px; /* pequeño espacio elegante entre repeticiones */
   word-spacing: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 }
 
 @keyframes titulo {
@@ -287,9 +324,14 @@ h2{
 .content__project-profesional div ul{
     text-align: end !important;
     list-style: none;
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-family: "Manrope";
     color: white;
+}
+
+.content__project-profesional ul li{
+    margin-top:15px;
+    /* font-size: 20px !important; */
 }
 
 /*Section personal project*/
@@ -411,9 +453,10 @@ h2{
 
 }
 
-.content__project-personal a i.fa-square-figma, i.fa-square-github{
-    font-size: 50px !important;
-    width: 50px !important;
+.content__project-personal a i.fa-square-figma,
+.content__project-personal a i.fa-square-github{
+    font-size: 50px;
+    width: 50px;
     color: white;
 }
 
@@ -421,7 +464,7 @@ h2{
 .experience{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 
 .experience h2{
@@ -431,10 +474,13 @@ h2{
 
 .experience__content{
     width: 1300px;
+    opacity: 1;
     display: flex;
     justify-content: center;
     flex-flow: wrap row ;
 }
+
+
 
 .experience__one{
     margin-top: 50px;
@@ -446,7 +492,7 @@ h2{
 
 .content__experience h4{
     font-size: 40px;
-    color: white !important;
+    color: #91E0F6;
     font-family: "syne", sans-serif;
     margin: 25px 0px;
     flex: 1 0 100%;
@@ -461,7 +507,7 @@ h2{
     font-size: 30px;
     color: white;
     text-align: end;
-    font-family: 'Manrope', sans-serif;
+    font-family: "syne", sans-serif;
     font-weight: 500;
     flex: 1 0 100%;
 }
@@ -472,7 +518,6 @@ h2{
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
     flex: 1 0 100%;
-    margin-bottom: 6px;
 }
 
 .experience__two{
@@ -482,6 +527,12 @@ h2{
     margin-top: 80px;
 
 }
+
+
+/* .experience__two ul li{
+    text-align: end;
+
+} */
 
 /*Working stack*/
 
@@ -493,10 +544,11 @@ h2{
 
 .working-stack__content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 1300px;
     flex-flow: wrap row;
-
+    gap: 50px;
+    margin-bottom: 300px;
 }
 
 .working-stack__content h2{
@@ -504,14 +556,19 @@ h2{
     justify-content: center;
     text-align: center;
     margin-bottom: 150px;
+    margin-top: 300px !important;
 }
 
 .working-stack__content div {
-    flex: 1 0 100% !important;
+    flex: 1 0 20% !important;
     padding-bottom: 40px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    gap: 10px;
     flex-flow: wrap row;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 20px;
 }
 
 .working-stack__content .frontend h4,
@@ -521,29 +578,23 @@ h2{
     font-family: 'Syne', sans-serif;
     font-weight: 600;
     color: #91E0F6;
-    margin: 0px;
+    margin: 0px 0px 20px;
     flex: 1 0 100% !important;
     text-transform: uppercase;
-    text-align: end;
+    text-align: center;
 }
 
-.working-stack__content .frontend p,
-.working-stack__content .design p,
-.working-stack__content .data-architecture p{
+
+.working-stack__section span{
     color: white;
     font-size: 18px;
     font-family: 'manrope', sans-serif;
-    flex: 1 0 100% !important;
-    text-align: end;
     font-weight: 400;
-}
-
-.working-stack__content .frontend{
-    transform: translateX(-75%);
-}
-
-.working-stack__content .design{
-    transform: translateX(-40%);
+    padding: 2px 20px;
+    background: #ffffff2a;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin-top: 8px !important;
 }
 
 footer{
@@ -574,6 +625,12 @@ footer {
     background-size: cover;
     flex-flow: wrap row;
 
+    
+    /* z-index: 2; */
+}
+
+footer::after{
+    filter: blur(70px);
 }
 
 #footer-overlay {
@@ -590,7 +647,7 @@ footer {
 
 .footer-content h2{
     color: black;
-    font-size: 130px; 
+    font-size: 100px; 
 }
 
 footer .social-media{
@@ -604,3 +661,107 @@ footer.section a{
     text-decoration: none;
     font-weight: 600;
 }
+
+
+
+main,
+.section,
+section,
+footer{
+  position: relative;
+}
+
+.circle{
+    position:absolute;
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:50%;
+    opacity:0;
+    transform:scale(0.4);
+    transition:all 1s ease;
+}
+
+.circle.show{
+    opacity:0.4;
+    transform:scale(1);
+}
+
+.content__project-profesional,
+.marquee,
+.title-working-stack,
+.title-experience{
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease;
+    z-index: 9;
+}
+
+.content__project-profesional.show,
+.marquee.show,
+.title-experience.show,
+.title-working-stack.show,
+.working-stack__section.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content__project-personal,
+.working-stack__section{
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: all 0.8s ease;
+    z-index: 9;
+}
+
+.content__project-personal.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content__project-profesional:nth-child(2){
+    transition-delay:0.2s;
+}
+
+.content__project-profesional:nth-child(3){
+    transition-delay:0.4s;
+}
+
+.content__project-profesional{
+  opacity:0;
+  transform:translateX(-80px);
+  transition:all 0.8s ease;
+}
+
+
+.content__project-profesional:nth-child(even){
+  transform:translateX(80px);
+}
+
+/* estado inicial */
+.content__experience{
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+/* primero → entra desde la izquierda */
+.experience__one{
+      opacity: 0;
+    transform: translateX(-100px) !important;
+}
+
+/* segundo → entra desde la derecha */
+.experience__two{
+      opacity: 0;
+    transform: translateX(80px);
+}
+
+/* cuando aparece */
+.experience__one.show{
+    opacity: 1;
+    transform: translateX(0px) !important;
+}
+
+.experience__two.show{
+    opacity: 1;
+    transform: translateX(0px) !important;
+}
+
