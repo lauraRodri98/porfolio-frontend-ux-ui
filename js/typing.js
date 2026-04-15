@@ -1,4 +1,4 @@
-const text = "user-friendly interfaces. Experience working with modern web technologies.";
+const text = "Focused on building clean, functional, user-friendly interfaces.";
 const element = document.getElementById("typing");
 
 let index = 0;

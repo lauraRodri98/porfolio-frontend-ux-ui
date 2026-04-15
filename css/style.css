@@ -37,6 +37,7 @@ span#typing{
          font-family: "Syne", sans-serif !important;
      font-weight: 600  !important;
      font-size: 30px  !important;
+     color: #000000;
 }
 
 @keyframes blink {
@@ -49,7 +50,7 @@ span#typing{
     display: flex;
     justify-content: center;
     align-items: start;
-    background: url("/public/imagenes/banner.webp") center/cover no-repeat;
+    background: url("/public/imagenes/Fondo\ \(2\).png") center/cover no-repeat;
     min-height: 120vh;
     gap: 30px;
     padding: 0px;
@@ -63,11 +64,12 @@ main::after{
     bottom:0;
     left:0;
     width:100%;
-    height:250px;
+    height:150px;
 
     background:linear-gradient(
         to bottom,
-        rgba(0,0,0,0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.333),
         rgba(0,0,0,1)
     );
 
@@ -207,7 +209,7 @@ li.cv{
 .introducion-presentation h1{
      font-family: "Syne", sans-serif;
      font-weight: 750;
-     font-size: 90px;
+     font-size: 80px;
      width: 90%;
 }
 
@@ -215,14 +217,15 @@ li.cv{
      font-family: "Syne", sans-serif;
      font-weight: 700;
      font-size: 70px;
+     color:#4F46E5;
 }
 
 .introducion-presentation p{
-     font-family: "Syne", sans-serif;
-     font-weight: 600;
-     font-size: 30px;
-     max-width: 85%;
-     line-height: 40px;
+    font-family: "Syne", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    max-width: 85%;
+    line-height: 40px;
 }
 
 .introduction,
@@ -230,6 +233,26 @@ li.cv{
   position: relative;
 }
 
+
+span.stack-slug{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Manrope";
+    padding: 5px 10px;
+    border-radius: 18px;
+    border: 1px solid #898989;
+    margin: 0px 10px 0px 0px;
+    backdrop-filter: blur(10px);
+}
+
+span.color{
+    color:#4F46E5;
+     font-family: "Syne", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    max-width: 85%;
+    line-height: 40px;
+}
 
 /*Section - Project professional*/
 /* .section{
@@ -645,12 +668,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 100vh;
-    padding: 80px 10%;
+    padding: 80px 0px;
     overflow: hidden;
+    min-height: 70vh;
     background:
     linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%),
-    url("/public/imagenes/banner.webp") center/cover no-repeat !important;
+    url("/public/imagenes/Fondo\ \(2\).png") center/cover no-repeat !important;
 }
 
 /* contenido */
@@ -658,14 +681,22 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1300px;
+    justify-content: center !important;
 }
 
 /* redes */
 .social-media{
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
+.project-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 .social-media a{
     display: flex;
@@ -707,8 +738,8 @@ footer{
     width: fit-content;
     padding: 14px 26px;
     border-radius: 12px;
-    border: 3px solid rgba(255, 255, 255, 0.489);
-    background: rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0.892);
+    background: rgba(211, 211, 211, 0.364);
     backdrop-filter: blur(8px);
     font-size: 18px !important;
     font-weight: 600;
@@ -733,6 +764,7 @@ footer{
     padding: 0px;
     margin-bottom: 0px;
     color: #000000;
+    font-size: 57px !important;
 }
 
 .social-media{
@@ -747,6 +779,12 @@ footer{
 
 .social-media a:hover{
     color:white;
+}
+
+footer.section{
+    margin: 0px;
+    padding: 0px;
+
 }
 
 
