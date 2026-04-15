@@ -9,6 +9,7 @@ function typeWriter() {
     element.textContent += text.charAt(index);
     index++;
     setTimeout(typeWriter, 40); // velocidad de escritura
+
   }
 
 }
