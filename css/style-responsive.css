@@ -65,7 +65,7 @@
 @media (max-width: 768px) {
 
     main{
-        min-height: 75dvh !important;
+        min-height: 90dvh !important;
         padding-top: 40px !important;
     }
 
@@ -193,13 +193,19 @@
     /* PERSONAL PROJECT */
     .content__project-personal {
         width: 100%;
-        height: 150px !important;
+        height: 240px !important;
         margin-bottom: 20px;
     }
 
     .section__project-personal {
         flex-wrap: wrap;
         gap: 20px;
+    }
+
+    .content__project-personal p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 200 !important;
     }
 
     .content__experience span {
