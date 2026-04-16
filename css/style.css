@@ -271,7 +271,8 @@ span.color{
 }
 
 .section-proyect-professional{
-    width: 1300px !important;
+    /* width: 1300px !important; */
+    padding: 0 clamp(16px, 4vw, 40px);
 }
 
 h2{
@@ -328,7 +329,8 @@ h2{
 
 .section__project-profesional{
     max-width: 1300px;
-    width: 1300px;
+    /* width: 1300px; */
+    padding: 0 clamp(16px, 4vw, 40px);
     z-index: 2;
 }
 
@@ -425,7 +427,8 @@ h2{
 .section__project-personal{
     display: flex;
     justify-content: space-between;
-    width: 1300px;
+    /* width: 1300px; */
+    padding: 0 clamp(16px, 4vw, 40px);
 }
 
 .content__project-personal{
@@ -537,7 +540,7 @@ h2{
 }
 
 .experience__content{
-    width: 1300px;
+    /* width: 1300px; */
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -609,7 +612,7 @@ h2{
 .working-stack__content{
     display: flex;
     justify-content: space-between;
-    width: 1300px;
+    /* width: 1300px; */
     flex-flow: wrap row;
     gap: 50px;
     margin-bottom: 150px;

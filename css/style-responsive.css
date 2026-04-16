@@ -64,6 +64,11 @@
 
 @media (max-width: 768px) {
 
+    main{
+        min-height: 75dvh !important;
+        padding-top: 40px !important;
+    }
+
     /* CONTENEDORES */
     .introduction,
     .section__project-profesional,
@@ -93,9 +98,13 @@
         width: 200px !important;
     }
 
+    .marquee{
+        margin-top: 30px !important;
+    }
+
     /* TITULOS */
     .introducion-presentation h1 {
-        font-size: 28px;
+        font-size: 35px;
         width: 100%;
     }
 
@@ -164,7 +173,7 @@
     }
 
         .working-stack__content div {
-        max-width: 200px !important;
+        max-width: 90% !important;
     }
 
     .working-stack__content div {
