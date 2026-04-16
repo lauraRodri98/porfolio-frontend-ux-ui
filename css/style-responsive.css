@@ -193,7 +193,7 @@
     /* PERSONAL PROJECT */
     .content__project-personal {
         width: 100%;
-        height: 240px !important;
+        height: 280px !important;
         margin-bottom: 20px;
     }
 
@@ -204,7 +204,7 @@
 
     .content__project-personal p {
         font-size: 16px;
-        line-height: 20px;
+        line-height: 10px;
         font-weight: 200 !important;
     }
 
