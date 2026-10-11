@@ -21,21 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
   /* CIRCULOS BACKGROUND */
   /* ----------------------------- */
 
-  const circles = document.querySelectorAll(".circle");
+  // const circles = document.querySelectorAll(".circle");
 
-  const circleObserver = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add("show");
-      }else{
-        entry.target.classList.remove("show");
-      }
-    });
-  },{threshold:0.1});
+  // const circleObserver = new IntersectionObserver((entries)=>{
+  //   entries.forEach(entry=>{
+  //     if(entry.isIntersecting){
+  //       entry.target.classList.add("show");
+  //     }else{
+  //       entry.target.classList.remove("show");
+  //     }
+  //   });
+  // },{threshold:0.1});
 
-  circles.forEach(circle=>{
-    circleObserver.observe(circle);
-  });
+  // circles.forEach(circle=>{
+  //   circleObserver.observe(circle);
+  // });
 
 
   /* ----------------------------- */
